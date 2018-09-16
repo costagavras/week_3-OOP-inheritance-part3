@@ -18,11 +18,11 @@ solar_system = System.create("Solar",ar_bodies)
 puts solar_system.all.inspect
 
 #calculating the mass of the instance
-puts solar_system.total_mass
+solar_system.total_mass
 
 #adding a new planet
 mars = Planet.new("Mars", 0.107, 24.66, 687)
 solar_system.add(mars)
 puts solar_system.all.inspect
 
-puts solar_system.total_mass
+solar_system.total_mass

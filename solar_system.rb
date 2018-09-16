@@ -34,12 +34,15 @@ class System
   end
 
   def total_mass
-    total = 0
-    @@bodies.each do |element|
-      total += element.mass
-    end
+    total = @@bodies.inject(0){|sum,element| sum + element.mass }
     puts "Total mass of Solar system's bodies is now #{total} of Earth's mass."
-    return total
+    #loop alternative
+    # total = 0
+    # @@bodies.each do |element|
+    #   total += element.mass
+    # end
+    # puts "Total mass of Solar system's bodies is now #{total} of Earth's mass."
+    # return total
   end
 
 end
